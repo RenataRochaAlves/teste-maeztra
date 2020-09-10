@@ -2,7 +2,7 @@ function getPhotos(){
 
     let headers = new Headers();
 
-    fetch('https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=6de28cdacebe45efc00045457435c80c&tags=dog&per_page=6&format=json',{
+    fetch('https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=6de28cdacebe45efc00045457435c80c&tags=gato&per_page=6&format=json',{
         method:'get',
         headers: headers
     }).then(
@@ -27,7 +27,7 @@ function showPhotos(flickrObj){
 
     object.forEach(element => {
         var image = document.createElement('img');
-        image.setAttribute('src', 'https://www.flickr.com/photos/' + element.owner + '/' + element.id);
+        image.setAttribute('src', 'https://farm' + element.farm + '.static.flickr.com/' + element.server + '/' + element.id + '_' + element.secret + '_t.jpg');
 
         body.appendChild(image);
     });
