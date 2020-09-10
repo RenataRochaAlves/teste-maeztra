@@ -27,7 +27,7 @@ function showPhotos(flickrObj){
 
     object.forEach(element => {
         var image = document.createElement('img');
-        image.setAttribute('src', 'http://www.flickr.com/photos/' + element.owner + '/' + element.id);
+        image.setAttribute('src', 'https://www.flickr.com/photos/' + element.owner + '/' + element.id);
 
         body.appendChild(image);
     });
